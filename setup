@@ -1,7 +1,17 @@
-cd &&
-ls -1d dotfiles/files/* dotfiles/files/.* | while read f; do
-  [ "$f" == 'dotfiles/files/.' ] ||
-  [ "$f" == 'dotfiles/files/..' ] ||
-  [ "$f" == 'dotfiles/files/.git' ] ||
-  ln -vsf "$f" .
-done
+#cd &&
+#ls -1d dotfiles/files/* dotfiles/files/.* | while read f; do
+#  [ "$f" == 'dotfiles/files/.' ] ||
+#  [ "$f" == 'dotfiles/files/..' ] ||
+#  [ "$f" == 'dotfiles/files/.git' ] ||
+#  ln -vsf "$f" .
+#done
+
+if [ -L "$HOME/Library/Application Support/Sublime Text 2/Packages" ] ; then
+  echo "Sublime settings already symlinked"
+  exit 1
+fi
+
+#rm -rf "$HOME/Library/Application Support/Sublime Text 2/Packages"
+#rm -rf "$HOME/Library/Application Support/Sublime Text 2/Installed Packages"
+#ln -s "$HOME/dotfiles/files/Sublime/Packages" "$HOME/Library/Application Support/Sublime Text 2/Packages"
+#ln -s "$HOME/dotfiles/files/Sublime/Installed Packages" "$HOME/Library/Application Support/Sublime Text 2/Installed Packages"
