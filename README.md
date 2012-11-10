@@ -1,3 +1,3 @@
 ##Dotfiles
 
-Vim configuration and other dotfiles that I use.
+Bash and Sublime Text 2 configuration and other dotfiles that I use.

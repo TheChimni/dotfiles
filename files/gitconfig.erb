@@ -2,8 +2,19 @@
   name = <%= name %>
   email = <%= email %>
 [alias]
+  s = status
+  st = status
+  f = fetch
+  fo = fetch origin
+  m = merge
+  r = rebase
+  p = pull
   c = commit
+  ci = commit
+  cm = commit -am
   ca = commit -a
+  b = branch
+  ba = branch -avv
   br = branch
   co = checkout
   lp = log -p
@@ -14,15 +25,8 @@
   lf = log --pretty=fuller
   cleanup = !git gc && git remote prune origin
   fork = remote add -f
-  s = status
-  b = branch
-  ba = branch -avv
-  f = fetch
-  fo = fetch origin
-  m = merge
-  r = rebase
-  p = pull
 [color]
+  ui = auto
 	branch = auto
 	diff = auto
 	interactive = auto
